@@ -2,6 +2,7 @@ package com.thinkconstructive.rest_demo.controller;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,16 +20,15 @@ public class CloudVendorAPIService {
 	@GetMapping("{vendorId}")
 	public CloudVendor getCloudVendorDetails(String VendorID) {
 		// return cloudVendor;
-		return new CloudVendor("C2", "Vendor 2", "Address Two", "xxxx");
+		return new CloudVendor("C3", "Vendor 3", "Address Three", "xxxx");
 
 	}
 
-	// @PostMapping
-	// public String createCloudVendorDetails(@RequestBody CloudVendor cloudVendor)
-	// {
-	// this.cloudVendor = cloudVendor;
-	// return "Cloud Vendor Created Successfully";
-	// }
+	@PostMapping
+	public String createCloudVendorDetails(@RequestBody CloudVendor cloudVendor) {
+		this.cloudVendor = cloudVendor;
+		return "Cloud Vendor Created Successfully";
+	}
 
 	@PutMapping
 	public String updateCloudVendorDetails(@RequestBody CloudVendor cloudVendor) {
