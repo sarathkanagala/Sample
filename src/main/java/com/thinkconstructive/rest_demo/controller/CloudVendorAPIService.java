@@ -20,7 +20,7 @@ public class CloudVendorAPIService {
 	@GetMapping("{vendorId}")
 	public CloudVendor getCloudVendorDetails(String VendorID) {
 		// return cloudVendor;
-		return new CloudVendor("C4", "Vendor 4", "Address Four", "xxxx");
+		return new CloudVendor("C4", "Vendor 4", "Address Four", "xxxxx");
 
 	}
 
